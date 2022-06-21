@@ -7,9 +7,9 @@
   "scripts": {
     "start": "node app.js",
     "test": "jest",
-    "unit-test": "jest src/__tests__/unit",
-    "integration-test": "jest src/__tests__/integration"
-  
+    "unit-test": "./node_modules/.bin/jest src/__tests__/unit",
+    "integration-test": "./node_modules/.bin/jest src/__tests__/integration",
+    "e2e-test": "wait-on http://localhost:3000 && ./node_modules/.bin/jest src/__tests__/e2e"
   },
   "author": "Patrik Nygren",
   "license": "ISC",
